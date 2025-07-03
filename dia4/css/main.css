@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.ej1 div {
+    background-color: aqua;
+    display: inline;
+}
+
+.ej1 span {
+    background-color: blueviolet;
+    display: block;
+}
+
+.ej2 div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.ej2 div:nth-child(1) {
+    background-color: coral;
+}
+
+.ej2 div:nth-child(2) {
+    background-color: gold;
+}
+
+.ej2 div:nth-child(3) {
+    background-color: firebrick;
+}
+
+.ej2-1 div:nth-child(2) {
+    display: none;
+}
+
+.ej2-2 div {
+    display: inline-block;
+}
