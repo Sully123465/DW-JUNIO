@@ -40,3 +40,48 @@
 .ej2-2 div {
     display: inline-block;
 }
+
+.ej3 header {
+    background-color: rgb(252, 227, 0);
+    height: 75px;
+}
+
+.ej3 header ul {
+    display: inline;
+    list-style: none;
+    position: absolute;
+    top: 28px;
+    right: 20px;
+}
+
+.ej3 header li {
+    display: inline;
+}
+
+.ej3 header li a{
+    cursor: pointer;;
+}
+
+.ej3 header li a:hover {
+    color: rgb(17, 0, 255)
+}
+
+.ej3 header img {
+    height: 100%;
+}
+
+.ej3 main{
+    min-height: calc(100vh - 125px);
+    text-align: center;
+}
+
+.ej3 main img {
+    width: 50vw;
+}
+
+.ej3 footer {
+    padding-top: 15px;
+    background-color: rgb(0, 160, 252);
+    height: 50px;
+    text-align: center;
+}
