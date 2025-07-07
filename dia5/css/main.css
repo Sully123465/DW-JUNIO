@@ -4,3 +4,75 @@
     border: 0;
     box-sizing: border-box;
 }
+
+a {
+    cursor: pointer;
+    ;
+}
+
+a:hover {
+    color: rgb(17, 0, 255);
+    background-color: rgb(220, 220, 252);
+}
+
+/* Header */
+
+header {
+    display: flex;
+    background-color: rgb(252, 227, 0);
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header ul {
+    display: flex;
+    gap: 10px;
+}
+
+header li {
+    display: flex;
+}
+
+header img {
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 125px);
+    text-align: center;
+    padding: 25px 10vw;
+    background-color: darkgray;
+    font-size: 20px;
+    font-family: "Shadows Into Light", cursive;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    width: 10vw;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 160, 252);
+    height: 50px;
+}
+
+.Instagram {
+    font-style: italic;
+}
+
+.Facebook {
+    font-style: oblique;
+}
