@@ -11,8 +11,8 @@ a {
 }
 
 a:hover {
-    color: rgb(17, 0, 255);
-    background-color: rgb(220, 220, 252);
+    color: rgb(255, 230, 0);
+    background-color: rgb(52, 89, 255);
 }
 
 /* Header */
@@ -39,6 +39,8 @@ header img {
     height: 100%;
 }
 
+/* Main */
+
 main {
     display: flex;
     flex-direction: column;
@@ -47,26 +49,32 @@ main {
     text-align: center;
     padding: 25px 10vw;
     background-color: darkgray;
-    font-size: 20px;
+    font-size: 24px;
     font-family: "Shadows Into Light", cursive;
 }
 
 .image-container {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
     align-items: center;
-    width: 10vw;
     flex-direction: row;
     align-content: center;
-    justify-content: center;
-    
+    justify-content: center; 
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
+
+/* Footer */
 
 footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(0, 160, 252);
+    background-color: rgb(0, 17, 252);
     height: 50px;
+    color: white;
 }
 
 .Instagram {
