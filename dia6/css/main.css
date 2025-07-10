@@ -13,6 +13,7 @@ a:hover {
     color: yellow;
 }
 
+
 /* Header */
 
 header {
@@ -22,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    font-family: "Manrope", sans-serif;
 }
 
 header ul {
@@ -41,6 +43,7 @@ header a {
     color: white;
     text-decoration: none;
 }
+
 
 /* Main */
 
@@ -89,7 +92,7 @@ main {
     background-size: cover;
 }
 
-h2{ 
+h2 {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 30px;
@@ -98,25 +101,36 @@ h2{
 
 .personajes {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    margin: 10px auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    max-width: 1200px;
+    width: 80vw;
+}
+
+.personajes img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
+.explicaciones {
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
+    text-align: left;
 }
 
-.explicaciones{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-}
-
-.imge{
+.image {
     float: left;
+    margin-right: 20px;
 }
 
 .doctores {
@@ -232,4 +246,5 @@ footer {
     background-color: rgb(13, 16, 61);
     height: 50px;
     color: white;
+    font-family: "Manrope", sans-serif;
 }
