@@ -35,15 +35,18 @@ header li {
     display: flex;
 }
 
-header img {
-    height: 100%;
-}
-
 header a {
     color: white;
     text-decoration: none;
 }
 
+.active {
+    color: yellow;
+}
+
+header img, header a {
+    height: 100%;
+}
 
 /* Main */
 
@@ -131,6 +134,7 @@ h2 {
 .image {
     float: left;
     margin-right: 20px;
+    border-radius: 15px;
 }
 
 .doctores {
