@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+.padre {
+    background-color: red;
+    border: 2px solid black;
+    width: 50vw;
+    height: 50vh;
+}
+
+.hijo1 {
+    background-color: rgb(0, 255, 55);
+    border: 2px solid black;
+    width: 50vh;
+    height: 50vw;
+}
+
+.hijo2 {
+    background-color: rgb(68, 0, 255);
+    border: 2px solid black;
+    width: 20em;
+    height: 20em;
+}
+
+
+.ej2 {
+  width: 100vw;
+  height: 100vh
+}
+
+@media (max-width: 479px) {
+    .ej2 {
+        background-color: red;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 779px) {
+    .ej2 {
+        background-color: yellow;
+    }
+}
+
+@media (min-width: 780px) and (max-width: 1199px) {
+    .ej2 {
+        background-color: green;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .ej2 {
+        background-color: blue;
+    }
+}
+
+.ej3{
+    background-color: red;
+    border: 5px solid black;
+    width: 50vw;
+    height: 50vw;
+    print-color-adjust: exact;
+}
+
+@media print{
+    .ej3{
+        background-color: green;
+    }
+}
+
