@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.scroll-container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  height: 75vh;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  scroll-snap-align: center;
+}
+
+.scroll-area:nth-of-type(1) {
+  background-color: red;
+}
+
+.scroll-area:nth-of-type(2) {
+  background-color: rgb(255, 0, 221);
+}
+
+.scroll-area:nth-of-type(3) {
+  background-color: rgb(38, 0, 255);
+}
+
+.scroll-area:nth-of-type(4) {
+  background-color: rgb(51, 255, 0);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  width: 50vw;
+  text-align: left;
+  font-size: 20px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.uno {
+  position: relative;
+  left: -25vw;
+  top: -50px;
+}
+
+.dos {
+  position: relative;
+  left: 25vw;
+  top: 50px;
+}
+
+.caja {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+#caja1 {
+  top: 0;
+  left: 0;
+}
+
+#caja2 {
+  top: 0;
+  right: 0;
+}
+
+#caja3 {
+  bottom: 0;
+  left: 0;
+}
+
+#caja4 {
+  bottom: 0;
+  right: 0;
+}
+
+#caja5 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.caja0 {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+h2:nth-of-type(1) {
+  background-color: red;
+  padding: 10px;
+}
+
+h2:nth-of-type(2) {
+  position: sticky;
+  top: 0;
+  background-color: lightblue;
+}
+
+
