@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    background-color: #e60d05;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.img1 {
+    filter: blur(5px);
+}
+
+.img2 {
+    filter: brightness(0.4);
+}
+
+.img3 {
+    filter: contrast(200%);
+}
+
+.img4 {
+    filter: drop-shadow(16px 16px 20px blue);
+}
+
+.img5 {
+    filter: grayscale(50%);
+}
+
+.img6 {
+    filter: hue-rotate(90deg);
+}
+
+.img7 {
+    filter: invert(75%);
+}
+
+.img8 {
+    filter: opacity(25%);
+}
+
+.img9 {
+    filter: saturate(30%);
+}
+
+.img10 {
+    filter: sepia(60%);
+}
+
+.sombra-div {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    text-align: center;
+}
+
+.sombra-div p {
+    font-size: 1.5rem;
+    color: #333;
+    text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor-externo {
+    border: 2px solid #444;
+    padding: 50px;
+    background-color: #e0e0e0;
+}
+
+.contenedor-interno {
+    border: 2px dashed #888;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.parrafo-estilizado {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.6;
+    background-color: #e60d05;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img11 {
+    mix-blend-mode: normal;
+}
+
+.img12 {
+    mix-blend-mode: multiply;
+}
+
+.img13 {
+    mix-blend-mode: screen;
+}
+
+.img14 {
+    mix-blend-mode: overlay;
+}
+
+.img15 {
+    mix-blend-mode: darken;
+}
+
+.img16 {
+    mix-blend-mode: lighten;
+}
+
+.img17 {
+    mix-blend-mode: color-dodge;
+}
+
+.img18 {
+    mix-blend-mode: color-burn;
+}
+
+.img19 {
+    mix-blend-mode: difference;
+}
+
+.img20 {
+    mix-blend-mode: exclusion;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transition: transform 0.6s ease;
+}
+
+.box1 {
+    background-color: #e74c3c;
+    transform: rotate3d(1, 0, 0, 30deg);
+}
+
+.box2 {
+    background-color: #27ae60;
+    transform: rotate3d(0, 1, 0, 45deg);
+}
+
+.box3 {
+    background-color: #2980b9;
+    transform: rotate3d(0, 0, 1, 60deg);
+}
+
+.box4 {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+}
+
+.box5 {
+    background: radial-gradient(circle, #48dbfb, #1e90ff);
+}
+
+.box6 {
+    background: linear-gradient(to right, #00b894, #55efc4);
+}

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: 36px;
+    /* tamaño fijo en píxeles */
+    margin-bottom: 20px;
+}
+
+/* Usando em (relativo al tamaño de fuente del elemento padre) */
+h2 {
+    font-size: 2em;
+    /* 2 veces el tamaño de fuente del padre */
+    margin-left: 1em;
+    /* igual al tamaño de fuente actual */
+}
+
+/* Usando rem (relativo al tamaño base de la raíz, html) */
+p {
+    font-size: 1.2rem;
+    /* 1.2 veces el font-size de html */
+    line-height: 1.5rem;
+    width: 80%;
+    /* combinado con % */
+}
+
+/* Usando % y viewport (vw, vh) */
+button {
+    font-size: 1rem;
+    padding: 2% 5%;
+    /* % relativo al contenedor */
+    width: 20vw;
+    /* 20% del ancho de la ventana */
+    height: 8vh;
+    /* 8% de la altura de la ventana */
+    border: none;
+    border-radius: 0.5rem;
+    background: teal;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkcyan;
+}
+
+/* Caso 1: em dependiente del font-size del padre */
+.box-em {
+    width: 20px;
+    font-size: 20px;
+    /* tamaño base */
+    border: 2px solid teal;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.box-em p {
+    font-size: 1.5em;
+    /* relativo al font-size del padre (.box-em) */
+}
+
+/* Caso 2: combinación de vw, rem, px en padding */
+.box-calc {
+    width: 50vw;
+    /* la mitad del ancho de la ventana */
+    padding: calc(2rem + 5px);
+    /* suma de relativo a raíz + valor fijo */
+    border: 2px solid darkorange;
+    font-size: 1rem;
+    margin: 20px auto;
+    background-color: rgba(255, 165, 0, 0.1);
+}
+
+h1 {
+    font-size: calc(2vw + 10px);
+}
+
+.legibilidad {
+    max-width: 60vh;
+    /* ancho máximo relativo a la altura de la ventana */
+    line-height: 1.6em;
+    /* 1.6 veces el tamaño de fuente */
+    font-size: 1rem;
+}
+
+/* Título adaptativo */
+.title {
+    font-size: 5vw;
+    /* Escala con el ancho de la pantalla */
+    color: darkblue;
+    margin-bottom: 20px;
+}
+
+/* Párrafo adaptativo */
+.text {
+    font-size: 2vh;
+    /* Escala con la altura de la pantalla */
+    max-width: 600px;
+}
+
+@font-face {
+    font-family: 'MiFuente';
+    /* Nombre interno de la fuente */
+    src: url('fonts/MiFuente.woff2') format('woff2');
+    /* Ruta al archivo .woff2 */
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1.custom-font {
+    font-family: 'MiFuente', sans-serif;
+    font-size: 5vw;
+    color: darkblue;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p.custom-font {
+    font-family: 'MiFuente', sans-serif;
+    font-size: 2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+    text-align: justify;
+}
+
+.variable-text {
+    font-variation-settings:
+        "wght" 700,
+        /* peso */
+        "wdth" 125,
+        /* ancho % */
+        "slnt" -10;
+    /* inclinación en grados */
+}

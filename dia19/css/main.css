@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+}
+
+.cuadrado1 {
+    background-color: #f00;
+}
+
+.cuadrado1:hover {
+    width: 200px;
+    transition: 0.3s ease-in-out;
+}
+
+.cuadrado2 {
+    background-color: rgb(76, 0, 255);
+}
+
+.cuadrado2:hover {
+    height: 200px;
+    transition: 0.3s ease-in-out;
+}
+
+.cuadrado3 {
+    background-color: rgb(0, 255, 106);
+}
+
+.cuadrado3:hover {
+    height: 200px;
+    width: 200px;
+    transition: 0.3s ease-in-out;
+}
+
+.color {
+    background-color: #000;
+}
+
+.color:hover {
+    background-color: #3edbd3;
+    transition: 0.3s ease-in-out;
+}
+
+.texto {
+    background-color: rgb(229, 255, 0);
+    width: 100px;
+    height: 100px;
+    color: black;
+    overflow: hidden;
+}
+
+.texto p {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.texto:hover p {
+    opacity: 1;
+}
+
+.cuadrado4 {
+    background-color: rgb(255, 0, 0);
+}
+
+.cuadrado5 {
+    background-color: rgb(0, 255, 0);
+}
+
+.cuadrado6 {
+    background-color: rgb(0, 0, 255);
+}
+
+@keyframes ancho {
+
+    0%,
+    100% {
+        width: 100px;
+    }
+
+    50% {
+        width: 200px;
+    }
+}
+
+.cuadrado4 {
+    animation: ancho 2s infinite alternate;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cuadrado5 {
+    animation: rotar 3s linear infinite;
+}
+
+@keyframes cambiaColor {
+    0% {
+        background-color: blue;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: rgb(255, 0, 221);
+    }
+}
+
+.cuadrado6 {
+    animation: cambiaColor 4s infinite;
+}
+
+@keyframes parpadea {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.texto-parpadea {
+    font-size: 24px;
+    animation: parpadea 1s infinite;
+    margin: 20px 0;
+}
+
+
+@keyframes mueve {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+.cuadro-mueve {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    animation: mueve 3s infinite alternate;
+    margin: 10px 0;
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src='js/main.js'></script>
+</head>
+<body>
+<h1>Título Principal (px)</h1>
+  <h2>Subtítulo (em)</h2>
+  <p>
+    Este es un párrafo con unidades 
+    Las rem se basan en el tamaño de fuente definido en el html.
+  </p>
+  <button>Botón </button>
+
+    <h2>Ejemplo con em y calc()</h2>
+
+  <!-- Primer caso -->
+  <div class="box-em">
+    <p>Texto con font-size en <code>em</code></p>
+  </div>
+
+  <p>
+    🔎 Si cambias <code>font-size</code> del div (ej. 20px → 30px),  
+    el párrafo crece porque <code>em</code> se multiplica por el tamaño de fuente del padre.
+  </p>
+
+  <!-- Segundo caso -->
+  <div class="box-calc">
+    Este div usa <code>width: 50vw</code> y 
+    <code>padding: calc(2rem + 5px)</code>.
+  </div>
+
+  <p>
+    📐 Aquí el ancho depende del viewport,  
+    mientras que el padding combina una unidad relativa a <code>html</code> (rem)  
+    con un valor absoluto (px).  
+    Si ajustas el tamaño base de fuente en <code>html</code>,  
+    el padding también cambia, pero los <code>5px</code> se mantienen fijos.
+  </p>
+
+ <h2>Prueba de legibilidad</h2>
+  <p class="legibilidad">
+    Este párrafo está limitado con <code>max-width: 60vh</code> y 
+    tiene <code>line-height: 1.6em</code>.  
+    Si ajustas la altura de la ventana, el ancho máximo también cambia.  
+    Además, puedes experimentar con valores de <code>line-height</code> como 
+    <b>1.2em</b>, <b>1.6em</b> o <b>2em</b> para ver cómo mejora o empeora la legibilidad.  
+    Un valor muy bajo compacta demasiado las líneas, y un valor muy alto deja demasiado 
+    espacio entre ellas.  
+
+
+    <h3 class="title">Título con font-size: 5vw</h3>
+
+  <p class="text">
+    Este párrafo usa <code>font-size: 2vh</code>.  
+    En pantallas grandes, el texto puede volverse demasiado grande porque <code>vh</code> depende de la altura.  
+    En pantallas pequeñas, puede resultar muy pequeño.  
+    Mientras tanto, el título con <b>5vw</b> se ajusta mejor al ancho disponible.
+  </p>
+
+  <p class="text">
+    En general, <code>vw</code> es más recomendable para títulos y encabezados,  
+    mientras que para texto largo es mejor usar unidades como <code>rem</code> o <code>em</code> para mantener legibilidad constante.
+  </p>
+
+   <h1 class="custom-font">Título con fuente personalizada</h1>
+
+  <p class="custom-font">
+    Este párrafo también usa la fuente personalizada importada mediante <code>@font-face</code>.  
+    Puedes reemplazar <code>MiFuente.woff2</code> por cualquier archivo .woff2 que tengas en tu proyecto.  
+    Es importante definir una fuente de reserva como <code>sans-serif</code> por si la fuente personalizada no carga.
+  </p>
+
+   <h4 class="variable-text">Título con variable font</h4>
+
+  <p class="variable-text">
+    Este párrafo también usa Roboto Flex con ajustes dinámicos.  
+    Con <code>font-variation-settings</code> puedes controlar:  
+    <ul>
+      <li><b>wght</b>: Peso de la fuente (100-1000)</li>
+      <li><b>wdth</b>: Ancho (porcentaje de compresión/expansión)</li>
+      <li><b>slnt</b>: Inclinación (ángulo en grados, negativo = hacia atrás)</li>
+      <li>Otros ejes según la variable font (opsz = tamaño óptico, etc.)</li>
+    </ul>
+  </p>
+
+</body>
+
+</html>
