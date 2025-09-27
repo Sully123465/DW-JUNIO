@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    height: 75px;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Bangers";
+    font-size: 25px;
+    background-color: #745c4d;
+}
+
+header ul {
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    list-style: none;
+}
+
+header li {
+    position: relative; /* necesario para submenús */
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* efecto hover en enlaces principales */
+header ul > li > a:hover,
+header ul > li > a:focus {
+    color: #fff7d6;
+    transform: translateY(-2px);
+}
+
+/* SUBMENÚS */
+header ul li ul {
+    display: block;           /* antes estaba en flex */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #8b7a6f;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 220px;
+    border-radius: 0 0 8px 8px;
+    z-index: 1000;
+
+    /* ocultar por defecto */
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+header ul li ul li {
+    display: block;
+}
+
+header ul li ul a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+header ul li ul a:hover,
+header ul li ul a:focus {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff7d6;
+}
+
+/* mostrar submenú al hover o foco */
+header ul li:hover > ul,
+header ul li:focus-within > ul {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+/* Estilo general de la galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;      /* permite varias filas si no caben */
+    gap: 15px;            /* espacio entre imágenes */
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Cada imagen de la galería */
+.galeria a img {
+    width: 200px;         /* tamaño uniforme */
+    height: 150px;        /* altura uniforme */
+    object-fit: cover;    /* recorta la imagen manteniendo proporción */
+    border-radius: 8px;   /* esquinas redondeadas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto hover */
+.galeria a img:hover {
+    transform: scale(1.05);              /* ligero zoom al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* sombra más marcada */
+}
+
+/* Asegurar que los controles de GLightbox sean visibles */
+.gclose, .gprev, .gnext, .goverlay, .gslide {
+    all: unset;       /* limpia herencias de tu CSS global */
+    position: fixed;  /* mantiene los controles sobre todo */
+    z-index: 99999;   /* encima de cualquier otro elemento */
+}

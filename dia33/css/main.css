@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+   margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #534caf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover{
+ cursor: pointer;
+}
+
+/* =========================
+   EJERCICIO 1: Div animado
+   ========================= */
+.div {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+@keyframes girarCrecerOpacidad {
+    0%   { transform: rotate(0deg) scale(1); opacity: 1; }
+    50%  { transform: rotate(180deg) scale(1.5); opacity: 0.5; }
+    100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}
+
+.box--animada {
+    animation: girarCrecerOpacidad 1s forwards;
+    background-color: lightgreen;
+}
+
+
+/* =========================
+   EJERCICIO 2: Párrafo
+   ========================= */
+.resaltado {
+    color: blue;
+    font-weight: bold;
+    transition: color 0.5s ease, opacity 0.5s ease;
+}
+
+@keyframes parrafoCambio {
+    0%   { color: blue; opacity: 1; }
+    50%  { color: red; opacity: 0.5; }
+    100% { color: blue; opacity: 1; }
+}
+
+.cambiado {
+    animation: parrafoCambio 0.5s forwards;
+}
+
+
+/* =========================
+   EJERCICIO 3: Div de tamaño
+   ========================= */
+.box-tamano {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
+}
+
+.box-tamano--grande {
+    width: 200px;
+    height: 200px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+}
+
+
+/* =========================
+   EJERCICIO 4: Crear divs aleatorios
+   ========================= */
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.nuevo-div {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: aparecerDiv 0.5s forwards;
+}
+
+@keyframes aparecerDiv {
+    from { opacity: 0; transform: scale(0.5); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.eliminar-div {
+    animation: eliminarDiv 0.5s forwards;
+}
+
+@keyframes eliminarDiv {
+    from { opacity: 1; transform: scale(1); }
+    to   { opacity: 0; transform: scale(0.5); }
+}

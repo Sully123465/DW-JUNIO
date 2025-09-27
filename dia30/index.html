@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' href='css/main.css'>
+  <script src='js/main.js' defer></script>
+</head>
+
+<body>
+  <button id="abrir">Abrir ventana</button>
+  <button id="cerrar">Cerrar ventana</button>
+  <button id="mover">Mover ventana</button>
+  <button id="redimensionar">Redimensionar ventana</button>
+  <button id="abrirGoogle">Abrir Google</button>
+
+  <div id="caja1" class="caja">1</div>
+  <div id="caja2" class="caja">2</div>
+  <div id="caja3" class="caja">3</div>
+  <div id="caja4" class="caja">4</div>
+  <div id="caja5" class="caja">5</div>
+
+  <button onclick="cambiarNumeros()">Cambiar números</button>
+
+  <div class="calc">
+    <div id="pantalla" class="pantalla">0</div>
+    <div class="teclado">
+      <button onclick="limpiarTodo()">C</button>
+      <button onclick="borrarUltimo()">⌫</button>
+      <button onclick="insertar('/')">÷</button>
+      <button onclick="insertar('*')">×</button>
+
+      <button onclick="insertar('7')">7</button>
+      <button onclick="insertar('8')">8</button>
+      <button onclick="insertar('9')">9</button>
+      <button onclick="insertar('-')">−</button>
+
+      <button onclick="insertar('4')">4</button>
+      <button onclick="insertar('5')">5</button>
+      <button onclick="insertar('6')">6</button>
+      <button onclick="insertar('+')">+</button>
+
+      <button onclick="insertar('1')">1</button>
+      <button onclick="insertar('2')">2</button>
+      <button onclick="insertar('3')">3</button>
+      <button onclick="calcular()" class="igual">=</button>
+
+      <button onclick="insertar('0')" class="cero">0</button>
+      <button onclick="insertar('.')">.</button>
+    </div>
+  </div>
+
+  <div id="ejercicios">
+    <h2>Ejercicios querySelectorAll()</h2>
+
+    <div class="ejercicio-div">Div 1</div>
+    <div class="ejercicio-div">Div 2</div>
+    <div class="ejercicio-div">Div 3</div>
+
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+
+    <button class="ejercicio-boton">Botón A</button>
+    <button class="ejercicio-boton">Botón B</button>
+  </div>
+
+
+</body>
+
+</html>

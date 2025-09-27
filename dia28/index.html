@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src='js/main.js' defer></script>
+</head>
+
+<body>
+
+<h2>Ejericio 1</h2>
+ <section id="cards" class="grid">
+      <!-- Cada tarjeta tiene: nombre, descripción y un elemento para activar el evento -->
+      <!-- 1 click -->
+      <article class="card" data-event="click">
+        <h2>click</h2>
+        <p>Se dispara cuando el usuario hace clic (ratón o equivalente táctil) en un elemento.</p>
+        <button class="trigger" id="btn-click">Haz click</button>
+      </article>
+
+      <!-- 2 dblclick -->
+      <article class="card" data-event="dblclick">
+        <h2>dblclick</h2>
+        <p>Se dispara al hacer doble clic sobre un elemento.</p>
+        <button class="trigger" id="btn-dblclick">Haz doble click</button>
+      </article>
+
+      <!-- 3 mouseover -->
+      <article class="card" data-event="mouseover">
+        <h2>mouseover</h2>
+        <p>Cuando el cursor entra en el área de un elemento (incluye hijos).</p>
+        <div class="box" id="box-mouseover">Pasa el ratón por aquí</div>
+      </article>
+
+      <!-- 4 mouseout -->
+      <article class="card" data-event="mouseout">
+        <h2>mouseout</h2>
+        <p>Cuando el cursor sale del área de un elemento (incluye hijos).</p>
+        <div class="box" id="box-mouseout">Saca el ratón de aquí</div>
+      </article>
+
+      <!-- 5 mousedown -->
+      <article class="card" data-event="mousedown">
+        <h2>mousedown</h2>
+        <p>Se dispara cuando se pulsa un botón del ratón sobre un elemento.</p>
+        <button class="trigger" id="btn-mousedown">Pulsa y mantén</button>
+      </article>
+
+      <!-- 6 mouseup -->
+      <article class="card" data-event="mouseup">
+        <h2>mouseup</h2>
+        <p>Se dispara cuando se suelta el botón del ratón tras pulsarlo.</p>
+        <button class="trigger" id="btn-mouseup">Suelta aquí</button>
+      </article>
+
+      <!-- 7 mousemove -->
+      <article class="card" data-event="mousemove">
+        <h2>mousemove</h2>
+        <p>Se dispara continuamente cuando el cursor se mueve dentro del elemento.</p>
+        <div class="box" id="box-mousemove">Mueve el ratón aquí</div>
+      </article>
+
+      <!-- 8 keydown -->
+      <article class="card" data-event="keydown">
+        <h2>keydown</h2>
+        <p>Cuando se pulsa una tecla (dispara al presionar, antes del carácter final).</p>
+        <input id="input-keydown" class="input" placeholder="Pulsa una tecla" />
+      </article>
+
+      <!-- 9 keyup -->
+      <article class="card" data-event="keyup">
+        <h2>keyup</h2>
+        <p>Cuando se suelta una tecla (útil para leer el valor final).</p>
+        <input id="input-keyup" class="input" placeholder="Pulsa y suelta una tecla" />
+      </article>
+
+      <!-- 10 keypress (obsoleto en algunos casos) -->
+      <article class="card" data-event="keypress">
+        <h2>keypress</h2>
+        <p>(Obsoleto en algunos navegadores) Se dispara al pulsar una tecla que genera un carácter.</p>
+        <input id="input-keypress" class="input" placeholder="Prueba keypress" />
+      </article>
+
+      <!-- 11 input -->
+      <article class="card" data-event="input">
+        <h2>input</h2>
+        <p>Se dispara cuando cambia el valor de un <code>input</code> mientras el usuario escribe.</p>
+        <input id="input-text" class="input" placeholder="Escribe aquí" />
+      </article>
+
+      <!-- 12 change -->
+      <article class="card" data-event="change">
+        <h2>change</h2>
+        <p>Se dispara cuando el valor de un campo cambia y pierde el foco (o al seleccionar opción).</p>
+        <select id="select-change" class="input">
+          <option value="">--Elige--</option>
+          <option value="A">Opción A</option>
+          <option value="B">Opción B</option>
+        </select>
+      </article>
+
+      <!-- 13 submit -->
+      <article class="card" data-event="submit">
+        <h2>submit</h2>
+        <p>Se dispara cuando se envía un formulario (ideal para validar o prevenir envío).</p>
+        <form id="form-submit" class="mini-form">
+          <input placeholder="nombre" name="nombre" />
+          <button type="submit">Enviar</button>
+        </form>
+      </article>
+
+      <!-- 14 focus -->
+      <article class="card" data-event="focus">
+        <h2>focus</h2>
+        <p>Se dispara cuando un elemento recibe el foco (p. ej. input). No burbujea.</p>
+        <input id="input-focus" class="input" placeholder="Haz foco aquí" />
+      </article>
+
+      <!-- 15 blur -->
+      <article class="card" data-event="blur">
+        <h2>blur</h2>
+        <p>Se dispara cuando un elemento pierde el foco. Útil para validar al salir.</p>
+        <input id="input-blur" class="input" placeholder="Haz foco y luego sal" />
+      </article>
+
+      <!-- 16 resize -->
+      <article class="card" data-event="resize">
+        <h2>resize</h2>
+        <p>Se dispara cuando la ventana del navegador cambia de tamaño.</p>
+        <div class="note">Cambia el tamaño de la ventana para ver el evento en el registro.</div>
+      </article>
+
+      <!-- 17 scroll -->
+      <article class="card" data-event="scroll">
+        <h2>scroll</h2>
+        <p>Se dispara cuando se desplaza el contenido de un contenedor o la ventana.</p>
+        <div class="scroll-box" id="scroll-box">
+          <p>Contenido para desplazar... (mucha línea)</p>
+          <p>Desplázame</p>
+          <p>Desplázame</p>
+          <p>Desplázame</p>
+          <p>Desplázame</p>
+        </div>
+      </article>
+
+      <!-- 18 contextmenu -->
+      <article class="card" data-event="contextmenu">
+        <h2>contextmenu</h2>
+        <p>Se dispara al abrir el menú contextual (clic derecho). Puedes prevenirlo para custom menus.</p>
+        <div class="box" id="box-context">Clic derecho aquí</div>
+      </article>
+
+      <!-- 19 touchstart (móvil) -->
+      <article class="card" data-event="touchstart">
+        <h2>touchstart</h2>
+        <p>Se dispara cuando un dedo toca la pantalla (dispositivos táctiles).</p>
+        <div class="box" id="box-touch">Toca aquí (móvil/tablet)</div>
+      </article>
+
+      <!-- 20 touchend (móvil) -->
+      <article class="card" data-event="touchend">
+        <h2>touchend</h2>
+        <p>Se dispara cuando se levanta el dedo tras tocar la pantalla.</p>
+        <div class="box" id="box-touchend">Toca y levanta aquí</div>
+      </article>
+    </section>
+
+    <aside id="log-panel">
+      <h3>Registro de eventos</h3>
+      <div id="log" class="log"></div>
+      <div class="controls">
+        <button id="clear-log">Limpiar registro</button>
+      </div>
+    </aside>
+
+<h2>Ejercicio 2-1</h2>
+<button class="e2-1">Cambia color</button>
+<button class="e2-1">Cambia color</button>
+<button class="e2-1">Cambia color</button>
+<button class="e2-1">Cambia color</button>
+<button class="e2-1">Cambia color</button>
+
+<h2>Ejercicio 2-2</h2>
+<div class="e2-2"></div>
+<div class="e2-2"></div>
+<div class="e2-2"></div>
+<div class="e2-2"></div>
+<div class="e2-2"></div>
+<button id="buton2-2">Añadir cuadro</button>
+
+<h2>Ejercicio 2-3</h2>
+<div id="e2_3"></div>
+
+<h2>Ejercicio 2-4</h2>
+<div id="e2-4"></div>
+
+<h2>Ejercicio 3-2</h2>
+form id="form-e3-2">
+    <input type="text" name="nombre" placeholder="Nombre" />
+    <input type="email" name="email" placeholder="Email" />
+    <input type="password" name="password" placeholder="Contraseña" />
+    <button type="submit">Enviar</button>
+
+</body>
+
+</html>

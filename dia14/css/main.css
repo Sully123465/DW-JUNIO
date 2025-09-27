@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+p {
+    max-width: 600px;     
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: justify;
+    word-wrap: break-word;  
+    hyphens: auto;           
+}

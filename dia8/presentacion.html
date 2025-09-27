@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Presentación</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src='js/main.js'></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/doctorwho.webp"></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="personajes.html">Personajes</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a class="active" href="presentacion.html">Presentacion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="presentation">
+        <div class="presentation__content">
+            <h2 class="presentation__title">Presentación del sitio</h2>
+            <p class="presentation__text">Esta web está dedicada al universo de la serie británica <strong>Doctor Who</strong>, mostrando información sobre los diferentes Doctores, sus enemigos más icónicos y proporcionando una forma de contacto.</p>
+            <br>
+            <h3 class="presentation__subtitle">Secciones de la web:</h3>
+            <ul class="presentation__list">
+                <li class="presentation__item"><strong>Inicio (index.html):</strong> da la bienvenida al usuario con una frase destacada y una imagen de fondo del universo de la serie.</li>
+                <li class="presentation__item"><strong>Personajes (personajes.html):</strong> una galería visual dividida en dos partes: los distintos Doctores y los enemigos más famosos. Cada personaje aparece con su imagen y nombre, y algunos tienen enlaces individuales (por ejemplo, <code>doctor1.html</code>).</li>
+                <li class="presentation__item"><strong>Contacto (contacto.html):</strong> incluye un formulario completo con campos como nombre, apellido, correo electrónico y mensaje. También se estiliza con un fondo visual relacionado con la TARDIS.</li>
+                <li class="presentation__item"><strong>Presentación (presentacion.html):</strong> actúa como introducción técnica y conceptual del sitio.</li>
+            </ul>
+            <br>
+            <h3 class="presentation__subtitle">Aspectos visuales generales:</h3>
+            <ul class="presentation__list">
+                <li class="presentation__item"><strong>Colores predominantes:</strong> azul oscuro, negro y tonos blancos, reforzando el estilo de ciencia ficción y misterio.</li>
+                <li class="presentation__item"><strong>Fuentes:</strong> se usa principalmente la fuente <em>Manrope</em> desde Google Fonts para una estética moderna y clara.</li>
+                <li class="presentation__item"><strong>Diseño:</strong> experiencia limpia, centrada en imágenes, con contenido dispuesto en bloques flexibles.</li>
+                <li class="presentation__item"><strong>Fondos personalizados:</strong> cada sección tiene un fondo relevante (galaxias, TARDIS o Dalek) que refuerza la ambientación de <em>Doctor Who</em>.</li>
+            </ul>
+            <br>
+            <h3 class="presentation__subtitle">Documentación del código</h3>
+            <h4 class="presentation__subtitle-small">Estructura de archivos y carpetas:</h4>
+            <ul class="presentation__list">
+                <li class="presentation__item"><strong>HTML:</strong> todos los archivos `.html` están ubicados en la raíz del proyecto.</li>
+                <li class="presentation__item"><strong>CSS:</strong> el archivo principal es `css/main.css`, compartido por todas las páginas.</li>
+                <li class="presentation__item"><strong>Imágenes:</strong> organizadas en subcarpetas dentro de `images/` (como `doctores/` o `enemigos/`).</li>
+                <li class="presentation__item"><strong>JS:</strong> se enlaza `js/main.js`, aunque actualmente sin funciones activas.</li>
+            </ul>
+            <br>
+            <h4 class="presentation__subtitle-small">Técnicas utilizadas:</h4>
+            <ul class="presentation__list">
+                <li class="presentation__item"><strong>Flexbox:</strong> usado en `header`, `footer` y formularios para disposición y alineación.</li>
+                <li class="presentation__item"><strong>Grid:</strong> empleado para mostrar los personajes de forma adaptable con `auto-fit` y `minmax`.</li>
+                <li class="presentation__item"><strong>Responsive design:</strong> logrado con `viewport`, unidades relativas (`vw`, `%`) y media queries implícitas.</li>
+                <li class="presentation__item"><strong>Reutilización de estilos:</strong> el `main.css` aplica estilos comunes y consistentes en todo el sitio.</li>
+            </ul>
+            <p class="presentation__text">Puedes ver el repositorio del proyecto en GitHub:  
+                <a class="presentation__link" href="https://github.com/Sully123465/DW-JUNIO" target="_blank">https://github.com/Sully123465/DW-JUNIO</a>
+            </p>
+        </div>
+    </main>
+    <footer>
+        <a>Instagram</a>
+        <a>Facebook</a>
+        <a>Twitter</a>
+        <a>Youtube</a>
+    </footer>
+</body>
+
+</html>

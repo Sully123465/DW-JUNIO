@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*carrousel*/
+
+.banner {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    transform-style: preserve-3d;
+    animation: autoRun 20s linear infinite;
+}
+
+@keyframes autoRun {
+    from { transform: rotateX(-16deg) rotateY(0deg); }
+    to { transform: rotateX(-16deg) rotateY(360deg); }
+}
+
+.banner .slider .item {
+    position: absolute;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(350px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1023px) {
+    .banner .slider { width: 160px; height: 200px; }
+    .banner .slider .item { transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px); }
+}

@@ -27,25 +27,35 @@
                     <a href="personajes.html">Personajes</a>
                 </li>
                 <li>
-                    <a class="header__ul--active" href="contacto.html">Contacto</a>
+                    <a class="active" href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="presentacion.html">Presentacion</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main class="main--contacto">
-        <div class="container">
-            <form>
-                <h1>Contacto</h1>
-                <input type="text" id="Nombre" placeholder="Nombre" required>
-                <input type="text" id="apellido" placeholder="Apellido" required>
-                <input type="email" id="email" placeholder="Correo eloectronico" required>
-                <input type="text" id="mobile" placeholder="Numero de telefono" required>
-                <h2>Ecribe tu mensaje aqui</h2>
-                <textarea required></textarea>
-                <input type="submit" value="Enviar" id="button">
-            </form>
-            </div>
-    </main>
+    <main class="contact">
+    <div class="contact__container">
+        <form class="contact__form">
+            <h1 class="contact__title">Contacto</h1>
+            <input class="contact__input" type="text" id="Nombre" placeholder="Nombre" required>
+            <input class="contact__input" type="text" id="apellido" placeholder="Apellido" required>
+            <input class="contact__input" type="email" id="email" placeholder="Correo eloectronico" required>
+            <input class="contact__input" type="text" id="mobile" placeholder="Numero de telefono" required>
+            <h2 class="contact__subtitle">Ecribe tu mensaje aqui</h2>
+            <textarea class="contact__textarea" required></textarea>
+            <input class="contact__button" type="submit" value="Enviar" id="button">
+        </form>
+    </div>
+
+     <div class="contact__map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19836.528104177174!2d-0.14119975!3d51.509865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b330b2e9a9b%3A0x23c21939e0eae7b3!2sLondon%2C%20UK!5e0!3m2!1ses!2ses!4v1695430199999!5m2!1ses!2ses"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</main>
     <footer>
         <a>Instagram</a>
         <a>Facebook</a>
