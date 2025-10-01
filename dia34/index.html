@@ -8,76 +8,99 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='css/main.css'>
     <script src='js/main.js' defer></script>
-    <link href="css/lightbox.css" rel="stylesheet"/>
-    <script src="js/lightbox-plus-jquery.js"></script>
 </head>
 
 
 <body>
+    <!-- 1-1: Menú con submenús -->
     <header>
         <nav>
             <ul>
                 <li>
-                    <a href="juego-de-mesa.html">Juegos de mesa</a>
+                    <a href="#" data-name="Juegos de mesa">Juegos de mesa</a>
                     <ul>
-                        <li><a href="juego-de-mesa.html">Nuevos lanzamientos</a></li>
-                        <li><a href="juego-de-mesa.html">Expansiones y reediciones</a></li>
-                        <li><a href="juego-de-mesa.html">Premios y nominaciones</a></li>
-                        <li><a href="juego-de-mesa.html">Ferias y eventos</a></li>
+                        <li><a href="#" data-name="Nuevos lanzamientos">Nuevos lanzamientos</a></li>
+                        <li><a href="#" data-name="Expansiones y reediciones">Expansiones y reediciones</a></li>
+                        <li><a href="#" data-name="Premios y nominaciones">Premios y nominaciones</a></li>
+                        <li><a href="#" data-name="Ferias y eventos">Ferias y eventos</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="rol.html">Rol</a>
+                    <a href="#" data-name="Rol">Rol</a>
                     <ul>
-                        <li><a href="rol.html">Nuevos manuales y suplementos</a></li>
-                        <li><a href="rol.html">Campañas y aventuras publicadas</a></li>
-                        <li><a href="rol.html">Eventos y jornadas de rol</a></li>
-                        <li><a href="rol.html">Noticias editoriales</a></li>
+                        <li><a href="#" data-name="Nuevos manuales">Nuevos manuales y suplementos</a></li>
+                        <li><a href="#" data-name="Campañas publicadas">Campañas y aventuras publicadas</a></li>
+                        <li><a href="#" data-name="Eventos de rol">Eventos y jornadas de rol</a></li>
+                        <li><a href="#" data-name="Noticias editoriales">Noticias editoriales</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="crowdfunding.html">CROWFUNDING</a>
+                    <a href="#" data-name="Crowdfunding">CROWFUNDING</a>
                     <ul>
-                        <li><a href="crowdfunding.html">Campañas activas</a></li>
-                        <li><a href="crowdfunding.html">Campañas destacadas del mes</a></li>
-                        <li><a href="crowdfunding.html">Proyectos financiados</a></li>
-                        <li><a href="crowdfunding.html">Actualizaciones y retrasos</a></li>
+                        <li><a href="#" data-name="Campañas activas">Campañas activas</a></li>
+                        <li><a href="#" data-name="Campañas destacadas">Campañas destacadas del mes</a></li>
+                        <li><a href="#" data-name="Proyectos financiados">Proyectos financiados</a></li>
+                        <li><a href="#" data-name="Actualizaciones">Actualizaciones y retrasos</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="videojuegos.html">Videojuegos</a>
+                    <a href="#" data-name="Videojuegos">Videojuegos</a>
                     <ul>
-                        <li><a href="videojuegos.html">Nuevos lanzamientos</a></li>
-                        <li><a href="videojuegos.html">Análisis y reseñas</a></li>
-                        <li><a href="videojuegos.html">Actualizaciones y DLCs</a></li>
-                        <li><a href="videojuegos.html">Eventos y torneos</a></li>
+                        <li><a href="#" data-name="Lanzamientos">Nuevos lanzamientos</a></li>
+                        <li><a href="#" data-name="Reseñas">Análisis y reseñas</a></li>
+                        <li><a href="#" data-name="DLCs">Actualizaciones y DLCs</a></li>
+                        <li><a href="#" data-name="Torneos">Eventos y torneos</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
 
+    <main>
+        <!-- Mostrar nombre del enlace clicado -->
+        <h1 id="selectedName">(Haz clic en un enlace del menú)</h1>
 
-    <section class="galeria">
-        <a href="img/chutulu.webp" class="glightbox" data-title="Mi primera foto">
-            <img src="img/chutulu.webp" alt="Foto 1">
-        </a>
-        <a href="img/cofferushex.jpg" class="glightbox" data-title="Mi segunda foto">
-            <img src="img/cofferushex.jpg" alt="Foto 2">
-        </a>
-        <a href="img/" class="glightbox" data-title="Mi tercera foto">
-            <img src="img/criaturas maravillosas.webp" alt="Foto 3">
-        </a>
-        <a href="img/critterkitchen.jpg" class="glightbox" data-title="Mi cuarta foto">
-            <img src="img/critterkitchen.jpg" alt="Foto 4">
-        </a>
-        <a href="img/finca.webp" class="glightbox" data-title="Mi quinta foto">
-            <img src="img/finca.webp" alt="Foto 5">
-        </a>
-    </section>
+        <!-- 2-1: Galería pequeña con Lightbox -->
+        <section>
+            <h2>Galería pequeña</h2>
+            <div class="gallery-small">
+                <img class="thumb" src="img/chutulu.webp" data-large="img/chutulu.webp" alt="Imagen 1">
+                <img class="thumb" src="img/cofferushex.jpg" data-large="img/cofferushex.jpg" alt="Imagen 2">
+                <img class="thumb" src="img/criaturas maravillosas.webp" data-large="img/criaturas maravillosas.webp"
+                    alt="Imagen 3">
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" aria-hidden="true">
+            <div class="lb-content">
+                <button id="lb-close">Cerrar ✕</button>
+                <img id="lb-image" src="" alt="Imagen ampliada">
+            </div>
+        </div>
+
+        <!-- 3-1: Galería Lazy -->
+        <section>
+            <h2>Galería Lazy</h2>
+            <div class="gallery-large">
+                <img class="lazy" data-src="img/cofferushex.jpg" alt="A">
+                <img class="lazy" data-src="img/cofferushex.jpg" alt="B">
+                <img class="lazy" data-src="img/cofferushex.jpg" alt="C">
+                <img class="lazy" data-src="img/cofferushex.jpg" alt="D">
+            </div>
+        </section>
+
+        <!-- 3-2: Accesibilidad -->
+        <section>
+            <h2>Accesibilidad</h2>
+            <button id="toggleSection" aria-expanded="false">Mostrar sección</button>
+            <div id="panel" aria-hidden="true" class="panel" style="display:none;">
+                <p>Este contenido se muestra/oculta</p>
+            </div>
+        </section>
+    </main>
 
 
-   
 </body>
 
 </html>

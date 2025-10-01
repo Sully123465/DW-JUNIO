@@ -4,3 +4,46 @@
     border: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    color: darkblue;
+}
+
+ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.tarjeta {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    width: 150px;
+}
+
+.bloque {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    background: #eee;
+}
+
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#galeria img {
+    width: 150px;      
+    height: 150px;     
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Texto dentro de la sección parallax */
+.parallax h1 {
+  color: white;
+  text-align: center;
+  padding-top: 40vh;
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Secciones Parallax */
+.parallax {
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-attachment: fixed; /* Clave para el efecto Parallax */
+  background-size: cover;       /* Ajusta la imagen al contenedor */
+  background-position: center;  /* Centra la imagen */
+  position: relative;
+}
+
+/* Imagen de la primera sección */
+.parallax1 {
+  background-image: url('../img/imagen1.jpg');
+}
+
+/* Imagen de la segunda sección */
+.parallax2 {
+  background-image: url('../img/imagen 2.jpg');
+}
+
+/* Secciones de contenido normal */
+.content {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: #f2f2f2;
+}
+
+
+/*Ejemplo pdf*/
+body {
+    background: #a29bfe;
+}
+
+#container{
+    margin: 10em auto;
+    height: 10em;
+    width: 10em;
+    position: relative;
+}
+
+#square {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 100%;
+    background: #dfe6e9;
+    box-shadow: inset -10px -5px 0px 0px rgba(178,190,195,0.3),
+}
+
+.eyeball {
+    width: 50%;
+    height: 50%;
+    background: #2d3436;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+}
